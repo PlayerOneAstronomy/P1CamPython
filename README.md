@@ -47,7 +47,7 @@ terms and conditions of this license.
 
 ```python
 import player_one_camera as P1Cam
-vcp = P1Cam.VectorCamProp()
-P1Cam.GetAllCameraProperties(vcp)
-print('camera count: {}'.format(len(vcp)))
+list_cam_prop = P1Cam.ListCamProp()
+P1Cam.GetAllCameraProperties(list_cam_prop)
+print('camera count: {}'.format(len(list_cam_prop)))
 ```

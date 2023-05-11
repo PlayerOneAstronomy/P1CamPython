@@ -1,9 +1,9 @@
-cmake_example Documentation
-============================
+player_one_camera Documentation
+===============================
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
 
-   cmake_example
+   player_one_camera

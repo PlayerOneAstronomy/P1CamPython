@@ -1,5 +1,5 @@
 package:
-  name: cmake_example
+  name: player_one_camera
   version: 0.0.1
 
 source:
@@ -27,12 +27,12 @@ test:
   requires:
     - pytest
   imports:
-    - cmake_example
+    - player_one_camera
   source_files:
     - tests
   commands:
     - python -m pytest
 
 about:
-  summary: A CMake example project built with pybind11.
+  summary: Player One camera SDK's python bindings with pybind11.
   license_file: LICENSE

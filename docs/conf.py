@@ -49,9 +49,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'cmake_example'
-copyright = '2016, Sylvain Corlay'
-author = 'Sylvain Corlay'
+project = 'player_one_camera'
+copyright = '2023, Player One Astronomy'
+author = 'Lei Zhang'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -67,7 +67,7 @@ release = '0.0.1'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -108,6 +108,7 @@ todo_include_todos = False
 
 
 # -- Options for HTML output ----------------------------------------------
+autodoc_member_order = 'bysource'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -203,7 +204,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'cmake_exampledoc'
+htmlhelp_basename = 'player_one_cameradoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -225,8 +226,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'cmake_example.tex', 'cmake_example Documentation',
-     'Sylvain Corlay', 'manual'),
+    (master_doc, 'player_one_camera.tex', 'player_one_camera Documentation',
+     'Lei Zhang', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -255,7 +256,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'cmake_example', 'cmake_example Documentation',
+    (master_doc, 'player_one_camera', 'player_one_camera Documentation',
      [author], 1)
 ]
 
@@ -269,8 +270,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'cmake_example', 'cmake_example Documentation',
-     author, 'cmake_example', 'One line description of project.',
+    (master_doc, 'player_one_camera', 'player_one_camera Documentation',
+     author, 'player_one_camera', 'One line description of project.',
      'Miscellaneous'),
 ]
 
@@ -288,4 +289,4 @@ texinfo_documents = [
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+intersphinx_mapping = {'https://docs.python.org/3': None}

@@ -1,4 +1,4 @@
-# Player One camera SDK python wrapper
+# Player One Camera SDK python wrapper
 This project is based on [cmake_example for pybind11](https://github.com/pybind/cmake_example), means that the Player One camera SDK's python bindings is implemented by using [pybind11](https://github.com/pybind/pybind11).
 
 
@@ -21,6 +21,7 @@ pip install ./P1CamPython
 
 With the `setup.py` file included in this example, the `pip install` command will
 invoke CMake and build the pybind11 module as specified in `CMakeLists.txt`.
+Note: network proxy may cause some errors when building.
 
 
 
@@ -30,7 +31,7 @@ Documentation for the example project is generated using Sphinx. Sphinx has the
 ability to automatically inspect the signatures and documentation strings in
 the extension module to generate beautiful documentation in a variety formats.
 The following command generates HTML-based reference documentation; for other
-formats please refer to the Sphinx manual:
+formats please refer to the [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html#installation-from-pypi) manual:
 
  - `cd P1CamPython/docs`
  - `make html`
@@ -50,4 +51,12 @@ import player_one_camera as P1Cam
 list_cam_prop = P1Cam.ListCamProp()
 P1Cam.GetAllCameraProperties(list_cam_prop)
 print('camera count: {}'.format(len(list_cam_prop)))
+```
+
+
+## Example
+
+In the `tests` folder, there is an example file `example_basic.py`, which shows the usage of each API, you can also run it directly to view the running results:
+```bash
+python3 example_basic.py # on windows, python example_basic.py
 ```

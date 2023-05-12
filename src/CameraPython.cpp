@@ -186,17 +186,17 @@ PYBIND11_MODULE(player_one_camera, m) {
         .def_readwrite("isSupportAuto", &ConfigsAttributes::isSupportAuto, "is support auto?")
         .def_readwrite("isWritable", &ConfigsAttributes::isWritable, "is writable?")
         .def_readwrite("isReadable", &ConfigsAttributes::isReadable, "is readable?")
-        .def_readwrite("configID", &ConfigsAttributes::configID, "config ID, eg: EXPOSURE")
+        .def_readwrite("configID", &ConfigsAttributes::configID, "config ID, eg, EXPOSURE")
         .def_readwrite("maxValue", &ConfigsAttributes::maxValue, "maximum value")
         .def_readwrite("minValue", &ConfigsAttributes::minValue, "minimum value")
         .def_readwrite("defaultValue", &ConfigsAttributes::defaultValue, "default value")
-        .def_readwrite("confName", &ConfigsAttributes::confName, "POAConfig name, eg: POA_EXPOSURE: \"Exposure\", POA_TARGET_TEMP: \"TargetTemp\"")
+        .def_readwrite("confName", &ConfigsAttributes::confName, "POAConfig name, eg, POA_EXPOSURE name is \"Exposure\"")
         .def_readwrite("confDescription", &ConfigsAttributes::confDescription, "a brief description about this one POAConfig");
 
     py::class_<SensorModeInfo>(m, "SensorModeInfo")
         .def(py::init<>())
         .def_readwrite("modeID", &SensorModeInfo::modeID, "it's unique, sensor mode ID")
-        .def_readwrite("name", &SensorModeInfo::name, "sensor mode name, can be used to display on the UI (eg: Combobox)")
+        .def_readwrite("name", &SensorModeInfo::name, "sensor mode name, can be used to display on the UI (eg, Combobox)")
         .def_readwrite("desc", &SensorModeInfo::desc, "sensor mode description, may be useful for tooltip");
 
     py::class_<GainsAndOffsets>(m, "GainsAndOffsets")

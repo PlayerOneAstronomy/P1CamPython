@@ -8,6 +8,26 @@ on:
       - master
 
 jobs:
+  install_packages_ubuntu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install prerequisites
+        shell: bash
+        run: |
+          sudo apt update
+          sudo apt-get install libusb-1.0-0-dev
+
+  install_packages_macos:
+    runs-on: macos-latest
+
+    steps:
+      - name: Install prerequisites
+        shell: bash
+        run: |
+          brew update
+          brew install libusb
+
   build:
     strategy:
       fail-fast: false

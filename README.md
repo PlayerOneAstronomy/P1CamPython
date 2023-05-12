@@ -56,7 +56,7 @@ print('camera count: {}'.format(len(list_cam_prop)))
 
 ## Example
 
-In the `tests` folder, there is an example file `example_basic.py`, which shows the usage of each API, you can also run it directly to view the running results:
+In the `examples` folder, there is an example file `example_basic.py`, which shows the usage of each API, you can also run it directly to view the running results:
 ```bash
 python3 example_basic.py # on windows, python example_basic.py
 ```

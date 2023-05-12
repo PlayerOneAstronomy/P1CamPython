@@ -29,6 +29,7 @@ jobs:
           brew install libusb
 
   build:
+    needs: [install_packages_ubuntu, install_packages_macos]
     strategy:
       fail-fast: false
       matrix:

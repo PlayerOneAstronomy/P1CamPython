@@ -68,9 +68,34 @@ pybind11_add_module(player_one_camera src/P1Cam.h src/P1Cam.cpp src/CameraPython
 # define (VERSION_INFO) here.
 target_compile_definitions(player_one_camera
                             PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
+                            
+########################################################################
+# Find build dependencies
+########################################################################
+if(NOT WIN32)
+	# libusb name for libusb-1.0
+    set(libusb1_library_names usb-1.0)
+	
+	find_package(PkgConfig)
+
+    pkg_check_modules (LIBUSB_PKG libusb-1.0 libusb)
+
+    find_library(LIBUSB_LIBRARIES
+    NAMES ${libusb1_library_names}
+    PATHS
+    ${LIBUSB_PKG_LIBRARY_DIRS}
+    /usr/lib
+    /usr/local/lib
+    )
+
+	if(NOT LIBUSB_LIBRARIES)
+		message(FATAL_ERROR "libusb-1.0 is required")
+	endif()
+endif()
+                          
 
 if(NOT WIN32)
-    target_link_libraries(player_one_camera PRIVATE ${PlayerOneCamera_LIB} usb-1.0)
+    target_link_libraries(player_one_camera PRIVATE ${PlayerOneCamera_LIB} ${LIBUSB_LIBRARIES})
 else()
     target_link_libraries(player_one_camera PRIVATE ${PlayerOneCamera_LIB})
 endif()

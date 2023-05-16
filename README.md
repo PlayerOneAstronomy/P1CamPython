@@ -7,6 +7,7 @@ This project is based on [cmake_example for pybind11](https://github.com/pybind/
 * A compiler with C++11 support
 * Pip 10+ or CMake >= 3.4 (or 3.14+ on Windows, which was the first version to support VS 2019)
 * Ninja or Pip 10+
+* libusb-1.0 (Linux and macOS)
 
 
 ## Installation
@@ -35,6 +36,8 @@ formats please refer to the [Sphinx](https://www.sphinx-doc.org/en/master/usage/
 
  - `cd P1CamPython/docs`
  - `make html`
+ 
+ In the `docs` folder, the `doc_html.zip` file is a already built document, you can unzip it and view the document.
 
 
 ## License
